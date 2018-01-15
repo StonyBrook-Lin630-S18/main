@@ -7,12 +7,12 @@
 \fcolorbox{gray!25}{gray!25}{
     \centering
     \begin{tabular}{l@{\qquad}l}
-        \textbf{Course:} Parsing and Syntactic Processing &
+        \textbf{Course:} Parsing and Processing &
         \textbf{Name:} Thomas Graf\\
-        \textbf{Course\#:} Lin630 (officially still Lin651) &
+        \textbf{Course\#:} Lin630 &
         \textbf{Email:} lin630@thomasgraf.net\\
-        \textbf{Time:} tbd &
-        \textbf{Office hours:} Tue\slash Thu\slash Fri 1:30--2:30\\
+        \textbf{Time:} M 11:00--12:00 \& 12:10--2:00 &
+        \textbf{Office hours:} W 11:00-2:00\\
         \textbf{Location:} CompLab SBS N250&
         \textbf{Office:} SBS N249\\
         \textbf{Course Website:} \href{http://lin630.thomasgraf.net}{lin630.thomasgraf.net} &
@@ -51,89 +51,75 @@
 \section{Course Requirements}
 \begin{itemize}
     \item \textbf{Homeworks}\\
-        There will be weekly homeworks, the solutions of which will be discussed during special review sessions.
+        There will be weekly, peer-graded homeworks.
         Homeworks are essential if you want to learn anything in this course --- you don't truly understand a parsing algorithm until you can carry it out yourself.
         %
-    \item \textbf{Review Paper}\\
-        Write a critical review of a particular topic in parsing or syntactic processing that will be shared with and commented on by your class mates.
-        You have to get my approval for your topic and your list of readings by the end of week 8 (see the website for topic suggestions).
-        Your paper should be about 15 pages (letter paper, 1in margins, double spaced, 12pt), must be written in \LaTeX, and has to be completed by the end of week 12.
-        After you have gotten feedback from your colleagues, you must hand in a revised version by the end of finals week.
-
-        This assignment serves two purposes: you get experience writing review articles, and your colleagues get to learn about topics that weren't covered in class.
+    \item \textbf{Peer Grading of Homeworks}\\
+        The best way to check your own understanding is to see if you can evaluate the solutions of your fellow students.
+        That is why every week two students will be in charge of grading all the homeworks (with my help, of course).
         %
-    \item \textbf{Paper Evaluations}\\
-        %
-        For each review paper, you have to write a 1-page evaluation (it can be longer if necessary, but do not go beyond 3 pages).
-        Ideally, you should engage with the paper on an intellectual level, which means critiquing parts you disagree with, suggesting follow-up readings, or asking questions that were left unanswered.
-        But presentational issues such as grammar, style, or overall structure can also be brought up.
-
-        Think of this as you peer-reviewing a squib for a journal like \emph{Language and Linguistics Compass}, which is something you will have to do quite frequently as an academic.
-        It also hones your skills for giving detailed but polite and structured feedback in a corporate environment, e.g.\ as part of writing and maintaining documentation for a specialized piece of software.
+    \item \textbf{Project Pitch}\\
+        At the end of the semester, you have to give me a pitch for a follow-up project.
+        This could be a psycholinguistic study, an implementation of a parsing algorithm, a proof of a specific theorem, whatever you find interesting.
+        The pitch has to describe how the project intersects with your own research, explain its merit for linguistics or NLP, and draw from the material covered in this class.
+        Ideally, you'll get me interested and we'll work on the project together.
         %
     \item \textbf{Workload per Credits}
         %
         \begin{itemize}
-            \item \emph{1 credit}: regular attendance, commenting on all review papers
-            \item \emph{2 credits}: the above, plus doing all the homeworks
-            \item \emph{3 credits}: the above, plus writing a review paper
+            \item \emph{1 credit}: regular attendance, class participation
+            \item \emph{2 credits}: the above, plus doing all the homeworks 
+            \item \emph{3 credits}: the above, plus peer grading and project pitch
         \end{itemize}
         %
-        Students who are retaking this course for credit can instead volunteer to run some of the review sessions.
+        Students who are retaking this course for credit can volunteer to give a guest lecture instead of a project pitch.
 \end{itemize}
+
 
 \section{Outline}
 
-This outline assumes that we meet twice a week for 90 minutes with a 10 minute break, plus a weekly recitation of 60 minutes.
-After week 9, we meet once a week for 60 minutes to brainstorm ideas for connecting parsing to protein folding.
+This outline assumes that we meet once a week for 110 minutes from 12:10 to 2:00pm.
+The time from 11:10 to 12:00 is reserved for discussion with the two peer-graders.
+If necessary, those 50 minute meetings can be moved to a different weekday.
+
+A separate math \& syntax primer will also be scheduled for week 1, and this time will be deducted from the very last meeting.
 
 \begin{center}
     \begin{tabular}{r@{\hspace{2em}}l@{\hspace{2em}}l@{\hspace{2em}}l}
         \toprule
-        \textbf{Wk} & \textbf{Chap} & \textbf{Topic} & \textbf{Assignments}\\
+        \textbf{Wk} & \textbf{Chap} & \textbf{Topic}\\
         \midrule
-        1 & \ref{cha:BigPicture},\ref{cha:ParserOverview} & Parsing across disciplines, modular view of parsing\\
-        2 & \ref{cha:TopDown},\ref{cha:TopDownEval}       & Top-down parsing\\
-        3 & \ref{cha:BottomUp},\ref{cha:ChartParsing}     & Bottom-up parsing, chart parsing intro\\
-        4 & \ref{cha:ChartParsing}                        & CKY and Earley\\
-        5 & \ref{cha:LeftCorner}                          & (Generalized) Left-corner parsing\\
-        6 & \ref{cha:Semiring}                            & Semiring parsing\\
-        7 & \ref{cha:BeyondCFG}                           & Moving beyond context-free grammars\\
-        8 & \ref{cha:MG-TopDown},\ref{cha:StablerParser}  & CFG-parsing of mildly-context sensitive formalisms & get topic approved\\
-        9 & \ref{cha:Deterministic},\ref{cha:Partial}     & LR parsing, partial parsing\\
+        1 & \ref{cha:syllabus}                            & Organization, big picture and relevance\\
+        2 & \ref{cha:BigPicture},\ref{cha:ParserOverview} & Parsing across disciplines, modular view of parsing\\
+        3 & \ref{cha:TopDown}                             & Top-down parsing\\
+        4 & \ref{cha:TopDownEval}                         & Top-down predictions for sentence processing\\
+        5 & \ref{cha:BottomUp}                            & Bottom-up parsing\\
+        6 & \ref{cha:LeftCorner}                          & (Generalized) Left-corner parsing\\
+        7 & same                                          & same\\
         \midrule
-        10 & & protein folding \\
-        11 & & protein folding \\
-        12 & & protein folding & review paper draft\\
-        13 & & protein folding \\
-        14 & & protein folding \\
-        15 & & protein folding & paper evaluations\\
+        8 & Spring break                                  & \\
         \midrule
-        finals1 & & Q\&A session\\
-        finals2 & & & paper due\\
+        9 & \ref{cha:ChartParsing}                        & Chart parsing overview, CKY\\
+        10 & \ref{cha:Earley}                             & Earley parsing\\
+        11 & \ref{cha:Prob}                               & Parsing with probabilities\\
+        12 & \ref{cha:BeyondCFG}                          & Moving beyond context-free grammars\\
+        13 & \ref{cha:MG-TopDown},\ref{cha:StablerParser} & CFG-parsing of Minimalist syntax\\
+        \midrule
+        14 &                                              & guest lectures\\
+        15 &                                              & guest lectures, Q\&A\\
         \bottomrule
     \end{tabular}
 \end{center}
 
-\medskip
-The whole course has a time investment of 3 credits for 15 weeks, which totals $3*53*15=2385$ minutes.
-The distribution is shown below.
-\medskip
-%
-\begin{center}
-    \begin{tabular}{rrrr}
-        \toprule
-        \textbf{type}    & \textbf{number} & \textbf{minutes} & \textbf{total}\\
-        \midrule
-        lecture          & 18              & 80               & 1440\\
-        recitation       & 9               & 60               & 540\\
-        research meeting & 6               & 60               & 360\\
-        Q\&A session     & 1               &                  & 45\\
-        \midrule
-                         &                 &                  & \emph{2385}\\
-        \bottomrule
-    \end{tabular}
-\end{center}
+Depending on student interest, some of those chapters may be skipped to make room for other chapters, e.g. Dependency parsing, CCG parsing, or shallow parsing and partial parsing techniques.
+
+\section{Online Component}
+Rather than Blackboard, I use github to distribute lecture notes and readings (yes, you have to print them yourself).
+The (optional) readings are in a private repository, so you need a github account to access them.
+If you don't have one already, you can create one for free (github does not collect any user data).
+Make sure to email me your username asap so that I can give you access to the repository.
+If you do not want to use github for some reason, you can drop by my office to make an offline copy of the readings.
+
 
 \section{Policies}
 
@@ -145,13 +131,4 @@ The distribution is shown below.
     \item If you want to come to my office hours and anticipate a longer meeting, please email me so that we can set aside enough time and avoid collisions with other students.
 \end{itemize}
 
-\subsection{Special Needs}
-If you have any special needs that might impact your class performance (learning disabilities, impaired sight or hearing, etc.), please come to my office hours or contact me via mail so we can make suitable arrangements.
-
-
-\section{Online Component}
-Rather than Blackboard, I use github to distribute lecture notes and readings (yes, you have to print them yourself).
-The readings are in a private repository, so you need a github account to access them.
-If you don't have one already, you can create one for free (github does not collect any user data).
-Make sure to email me your username asap so that I can give you access to the repository.
-If you do not want to use github for some reason, you can drop by my office to make an offline copy of the readings.
+\input{./tex/blabla.tex}
