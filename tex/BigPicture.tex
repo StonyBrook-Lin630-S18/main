@@ -144,12 +144,12 @@ For this reason, computer scientists prefer a subclass of rewrite grammars known
 In syntax, those are commonly known as \emph{phrase structure grammars} (PSGs).
 For CFGs, $R$ is a finite subset of $N \times (N \cup T)^+$, that is to say, only a single non-terminal symbol can appear to the left of a rewrite arrow.
 That's why these grammars are called context-free: whether a rule can apply to a non-terminal symbol never depends on what appears to the left or the right of the symbol.
-%
-\begin{exercise}
+
+\begin{homework}
     The grammar in the previous example has four context-free rewrite rules.
     What are they?
-\end{exercise}
-%
+\end{homework}
+
 \begin{examplebox}[A Context-Free Grammar]
     Let $G \is \tuple{
             \setof{S},
@@ -200,13 +200,13 @@ So originally the phrase structure trees used in syntax were actually the deriva
     \end{center}
 \end{examplebox}
 %
-\begin{exercise}
+\begin{homework}
     In linguistics there are many debates about the difference between \emph{representational} and \emph{derivational theories}.
     Representational theories do not care about how structures are assembled and instead use constraints to separate the well-formed structures from the ill-formed ones.
     Derivational theories describe how the structures built via certain operations and restrict when and where these operations may apply.
     Phrase structure trees are usually thought of as representational in nature, they encode the structure of the sentence but not necessarily how it was built (e.g. via Merge and Move in Minimalism).
     What should we make of this divide given that phrase structure trees were originally derivation trees?
-\end{exercise}
+\end{homework}
 
 
 \subsection{Recognizers and Parsers}
@@ -353,9 +353,9 @@ What does this mean for language?
 Instead of thinking of the grammar and the parser as distinct entities, we can view them as different descriptions of the human faculty of language, with the grammar close towards the top in the computational section, while the parser is closer to the algorithmic level \citep[cf.][]{NeelemanKoot10}.
 The distinction between competence parser and performance parser would also fit into this paradigm, with the former closer to the computational level but not as close as what we call the grammar.
 
-\begin{exercise}
+\begin{homework}
     Can you think of an experiment or case study that would argue against the idea of parser and grammar as one and the same object?
-\end{exercise}
+\end{homework}
 
 
 \subsection{Why Processing Matters}
