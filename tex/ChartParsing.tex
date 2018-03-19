@@ -787,12 +787,16 @@ As indicated by the term \emph{normal form}, every CFG can be brought into CNF\@
 %
 \begin{exercise}
     Define an algorithm for transforming arbitrary CFGs into CNF\@.
+
+    \emph{Hint:} You may use new non-terminal symbols in the CNF grammar if necessary.
 \end{exercise}
 %
 \begin{exercise}
     Another common normal form for CFGs is \emph{Greibach Normal Form} (GNF), which only allows rewrite rules of the form $A \rewrite a \alpha$, where $\alpha \in N^*$.
     Can you define an algorithm that converts any arbitrary CFG into GNF as long as it does not generate the empty string?
+
     \emph{Hint:} You already know an algorithm that gets you halfway there.
+    It can be found in the unit on left corner parsing.
 \end{exercise}
 
 It is often stated that the CKY-parser only works for grammars in CNF\@.
@@ -815,6 +819,37 @@ Any known implementation is still much faster with CNF grammars, but the claim t
 
 \subsection{Formalizing the Data Structure}
 Agenda initialized as $\setof{[i, A, i+1] | A \rewrite a, a = w_i}$
+
+\begin{exercise}
+    Write down a grammar in CNF for *The father of the woman on the balcony saw the suitor with a telescope*.
+    This grammar should allow for *on the balcony* to modify *the father* or *the woman*.
+    It should also be able to treat *with a telescope* as an NP-adjunct or a VP-adjunct.
+    Then construct the CKY chart for the sentence.
+\end{exercise}
+
+\begin{exercise}
+    Continuing the previous exercise, how would you annotate the corresponding trees with indices and outdices?
+    Can this format be used in a meaningful way with CKY?
+    Why (not)?
+\end{exercise}
+
+\begin{exercise}
+    If one follows the standard, chart-based definition of the CKY parser, it is not a realistic model of human sentence processor because it explores all possible parses in parallel.
+    The existence of garden-path sentences suggests that humans do not do that.
+    But the CKY parsing schema itself does not enforce exhaustive, parallel exploration of all possible parses.
+    A suitable control structure may prioritize certain analyses over others, yielding a more serial behavior.
+
+    Against this backdrop, consider
+
+    \begin{enumerate}
+        \item garden path sentences, and
+        \item center embedding VS right embedding, and
+        \item merely local syntactic coherence effects.
+    \end{enumerate}
+
+    Can any of these phenomena be explained assuming a CKY parsing schema?
+    Do you have to make special assumptions about the control structure?
+\end{exercise}
 
 \bibliographystyle{./bib/linquiry3}
 \bibliography{./bib/universal,./bib/graf}
